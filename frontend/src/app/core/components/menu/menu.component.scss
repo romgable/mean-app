@@ -1,0 +1,27 @@
+:host {
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: flex-start;
+  flex: 0 1 15%;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+
+  i {
+    margin-left: 0.5rem;
+
+    &.fa-tint {
+      color: #5081b9;
+    }
+    &.fa-leaf {
+      color: #97ce96;
+    }
+  }
+}
+
+button {
+  background: #4e4242;
+}

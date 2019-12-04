@@ -1,0 +1,31 @@
+<mat-table [dataSource]="datasource">
+  <ng-container matColumnDef="date">
+    <mat-header-cell *matHeaderCellDef>
+      Datum
+    </mat-header-cell>
+    <mat-cell *matCellDef="let item" data-label="Datum">
+      {{ item.date | date: 'dd.MM.yyyy HH:mm' }}
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="message">
+    <mat-header-cell *matHeaderCellDef>
+      Message
+    </mat-header-cell>
+    <mat-cell *matCellDef="let item" data-label="Message">
+      {{ item.message }}
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <mat-header-cell *matHeaderCellDef></mat-header-cell>
+    <mat-cell *matCellDef="let item" data-label="Aktionen">
+      <button mat-button (click)="deleteItem(item)">
+        <i class="fas fa-trash"></i>
+      </button>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>

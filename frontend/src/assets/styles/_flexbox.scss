@@ -1,0 +1,31 @@
+@import '~flexboxgrid/css/flexboxgrid.min.css';
+
+.d-flex {
+  display: flex;
+}
+
+.row {
+  flex: auto;
+}
+
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-content-end {
+  justify-content: flex-end;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.flex-content-center {
+  justify-content: center;
+}
